@@ -1,0 +1,2 @@
+This project generates an assortment of errors and warnings on different
+branches and compilers
