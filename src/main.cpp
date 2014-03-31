@@ -4,5 +4,5 @@
 
 int main()
 {
-  return 'a';
+  return 0;
 }
