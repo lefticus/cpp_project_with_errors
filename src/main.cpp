@@ -2,7 +2,7 @@
 // See "license.txt" for details.
 // Copyright 2014, Jason Turner (jason@emptycrate.com)
 
-int main()
+int main(int argc, char *argv[])
 {
   return 0;
 }
