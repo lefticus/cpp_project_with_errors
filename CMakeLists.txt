@@ -4,6 +4,8 @@ project(cpp_project_with_errors)
 
 set(EXTRA_LINKER_FLAGS "")
 
+bob
+
 if (CMAKE_COMPILER_IS_GNUCC)
   option(ENABLE_COVERAGE "Enable Coverage Reporting in GCC" FALSE)
 
