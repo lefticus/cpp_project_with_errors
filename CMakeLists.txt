@@ -4,7 +4,6 @@ project(cpp_project_with_errors)
 
 set(EXTRA_LINKER_FLAGS "")
 
-bob
 
 if (CMAKE_COMPILER_IS_GNUCC)
   option(ENABLE_COVERAGE "Enable Coverage Reporting in GCC" FALSE)
@@ -15,6 +14,7 @@ if (CMAKE_COMPILER_IS_GNUCC)
   endif()
 
 endif()
+
 
 list(APPEND CPACK_SOURCE_IGNORE_FILES "${CMAKE_CURRENT_BINARY_DIR}")
 list(APPEND CPACK_SOURCE_IGNORE_FILES "\\\\.svn")
@@ -51,6 +51,19 @@ find_library(READLINE_LIBRARY NAMES readline PATH /usr/lib /usr/local/lib /opt/l
 
 enable_testing()
 
+macro(breaking_macro a)
+  #  message(SEND_ERROR "An Error")
+
+
+  message(WARNING "A Warning")
+  #  cause
+  #configure_file(Doxyfile.in)
+
+  message(FATAL_ERROR "A Fatal Error")
+
+endmacro()
+
+breaking_macro("bob")
 
 message(STATUS "Detecting readline support")
 if (READLINE_LIBRARY)
