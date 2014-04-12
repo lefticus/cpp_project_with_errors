@@ -2,6 +2,11 @@
 // See "license.txt" for details.
 // Copyright 2014, Jason Turner (jason@emptycrate.com)
 
+template<typename T>
+void function(const T& t)
+{
+}
+
 class MyClass
 {
   public:
@@ -18,5 +23,7 @@ class MyClass
 
 int main(int argc, char *argv[])
 {
+  function(1);
+  function(6.3);
   return 0;
 }
