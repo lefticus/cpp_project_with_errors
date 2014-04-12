@@ -47,7 +47,6 @@ include(CPack)
 
 find_library(READLINE_LIBRARY NAMES readline PATH /usr/lib /usr/local/lib /opt/local/lib)
 
-enable_testing()
 
 
 message(STATUS "Detecting readline support")
@@ -81,8 +80,6 @@ include_directories(include)
 add_executable(cpp_project_with_errors src/main.cpp)
 target_link_libraries(cpp_project_with_errors ${LIBS} ${EXTRA_LINKER_FLAGS})
 
-
-add_test(NAME Test COMMAND cpp_project_with_errors)
 
 install(TARGETS cpp_project_with_errors ${MODULES} RUNTIME DESTINATION bin LIBRARY DESTINATION lib/cpp_project_with_errors )
 
