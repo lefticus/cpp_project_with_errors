@@ -25,5 +25,12 @@ int main(int argc, char *argv[])
 {
   function(1);
   function(6.3);
+  
+  
+  {
+    // shadow a variable in a new scope to cause a new warning
+    double argc = 0.9;
+  }
+
   return 0;
 }
