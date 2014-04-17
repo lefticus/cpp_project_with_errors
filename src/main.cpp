@@ -21,6 +21,11 @@ class MyClass
 
 };
 
+int somefunc()
+{
+  return 1;
+}
+
 int main(int argc, char *argv[])
 {
   function(1);
