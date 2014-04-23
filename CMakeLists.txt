@@ -81,6 +81,7 @@ include_directories(include)
 add_executable(cpp_project_with_errors src/main.cpp)
 target_link_libraries(cpp_project_with_errors ${LIBS} ${EXTRA_LINKER_FLAGS})
 
+add_subdirectory(ext/test)
 
 add_test(NAME Test COMMAND cpp_project_with_errors)
 
