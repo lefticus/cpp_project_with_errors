@@ -83,6 +83,7 @@ target_link_libraries(cpp_project_with_errors ${LIBS} ${EXTRA_LINKER_FLAGS})
 
 
 add_test(NAME Test COMMAND cpp_project_with_errors)
+add_test(NAME Test2 COMMAND false)
 
 install(TARGETS cpp_project_with_errors ${MODULES} RUNTIME DESTINATION bin LIBRARY DESTINATION lib/cpp_project_with_errors )
 
