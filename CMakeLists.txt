@@ -78,7 +78,7 @@ endif()
 include_directories(include)
 
 
-add_executable(cpp_project_with_errors src/main.cpp)
+add_executable(cpp_project_with_errors src/main.cpp src/NewFile.cpp)
 target_link_libraries(cpp_project_with_errors ${LIBS} ${EXTRA_LINKER_FLAGS})
 
 
