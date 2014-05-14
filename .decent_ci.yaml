@@ -1,3 +1,6 @@
 results_repository : ChaiScript/chaiscript-build-results
 results_path : _posts
 results_base_url : https://chaiscript.github.io/chaiscript-build-results/
+regression_repository : ChaiScript/
+regression_script : ls $REGRESSION_BASE $REGRESSION_CUR
+
