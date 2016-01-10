@@ -2,6 +2,8 @@
 // See "license.txt" for details.
 // Copyright 2014, Jason Turner (jason@emptycrate.com)
 
+#include <iostream>
+
 template<typename T>
 void function(const T& t)
 {
@@ -31,6 +33,11 @@ int main(int argc, char *argv[])
     // shadow a variable in a new scope to cause a new warning
     double argc = 0.9;
   }
+
+  std::cout << "[decent_ci:test_result:warn]\n";
+
+  std::cout << "[decent_ci:test_result:message] Big Table Diffs!\n";
+
 
   return 0;
 }
