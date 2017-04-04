@@ -2,5 +2,5 @@
 
 int main()
 {
-  std::cout << "[decent_ci::test_result::warn]\n";
+  std::cout << "[decent_ci:test_result:warn]\n";
 }
