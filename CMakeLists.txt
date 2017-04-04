@@ -81,8 +81,19 @@ include_directories(include)
 add_executable(cpp_project_with_errors src/main.cpp src/NewFile.cpp)
 target_link_libraries(cpp_project_with_errors ${LIBS} ${EXTRA_LINKER_FLAGS})
 
+add_executable(pass_test src/pass_test.cpp)
+add_executable(fail_test src/fail_test.cpp)
+add_executable(crash_test src/crash_test.cpp)
+add_executable(timeout_test src/timeout_test.cpp)
 
 add_test(NAME Test COMMAND cpp_project_with_errors)
+add_test(NAME Pass_Test COMMAND pass_test)
+add_test(NAME Fail_Test COMMAND fail_test)
+add_test(NAME Crash_Test COMMAND crash_test)
+add_test(NAME Timeout_Test COMMAND timeout_test)
+
+set_tests_properties(Timeout_Test PROPERTIES TIMEOUT 1)
+
 
 install(TARGETS cpp_project_with_errors ${MODULES} RUNTIME DESTINATION bin LIBRARY DESTINATION lib/cpp_project_with_errors )
 

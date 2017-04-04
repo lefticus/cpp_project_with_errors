@@ -11,5 +11,5 @@ int main()
     i += j;
   }
 
-  return 'a'
+  
 }
