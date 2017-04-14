@@ -95,6 +95,7 @@ add_test(NAME othertests.Crash_Test COMMAND crash_test)
 add_test(NAME Timeout_Test COMMAND timeout_test)
 add_test(NAME othertests.Warning_Test COMMAND warning_test)
 add_test(NAME Message_Test COMMAND message_test)
+add_test(NAME onepassedtest.Pass_Test COMMAND pass_test)
 
 set_tests_properties(Timeout_Test PROPERTIES TIMEOUT 1)
 
